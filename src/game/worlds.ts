@@ -1,0 +1,123 @@
+// ===== World Themes =====
+// Each palette uses 6 maximally distinct, high-saturation colors so cells
+// are easy to tell apart on a black background. Colorblind alternates follow
+// the same principle with hue/lightness separation.
+
+import { WorldTheme } from './types';
+
+export const WORLDS: WorldTheme[] = [
+  {
+    id: 1,
+    name: 'Coral Reef',
+    emoji: '🪸',
+    bg: 'from-cyan-400 via-teal-400 to-sky-500',
+    accent: 'text-cyan-50',
+    palette: ['#ff3b3b', '#22d3ee', '#facc15', '#a3e635', '#f472b6', '#3b82f6'],
+    cbPalette: ['#e63946', '#06d6a0', '#ffd166', '#118ab2', '#ef476f', '#073b4c'],
+    cellShape: 'pebble',
+    effect: 'none',
+  },
+  {
+    id: 2,
+    name: 'Neon Nights',
+    emoji: '🌃',
+    bg: 'from-slate-900 via-purple-950 to-slate-900',
+    accent: 'text-fuchsia-300',
+    palette: ['#ff006e', '#3a86ff', '#ffbe0b', '#06ffa5', '#8338ec', '#fb5607'],
+    cbPalette: ['#f72585', '#4cc9f0', '#fcbf49', '#43aa8b', '#577590', '#f94144'],
+    cellShape: 'neon',
+    effect: 'none',
+  },
+  {
+    id: 3,
+    name: 'Autumn Grove',
+    emoji: '🍂',
+    bg: 'from-amber-700 via-orange-700 to-red-800',
+    accent: 'text-amber-100',
+    palette: ['#f77f00', '#fcbf49', '#d62828', '#80b918', '#6a4c93', '#577590'],
+    cbPalette: ['#e76f51', '#f4a261', '#264653', '#2a9d8f', '#e9c46a', '#bc4749'],
+    cellShape: 'leaf',
+    effect: 'none',
+  },
+  {
+    id: 4,
+    name: 'Candy Pop',
+    emoji: '🍭',
+    bg: 'from-pink-300 via-rose-300 to-purple-300',
+    accent: 'text-pink-700',
+    palette: ['#ff5da2', '#5ce1e6', '#ffd166', '#9ef01a', '#c77dff', '#ff7b00'],
+    cbPalette: ['#f72585', '#4cc9f0', '#fcbf49', '#43aa8b', '#7209b7', '#f94144'],
+    cellShape: 'candy',
+    effect: 'none',
+  },
+  {
+    id: 5,
+    name: 'Deep Space',
+    emoji: '🪐',
+    bg: 'from-slate-950 via-indigo-950 to-black',
+    accent: 'text-indigo-200',
+    palette: ['#ef476f', '#ffd166', '#06d6a0', '#118ab2', '#7209b7', '#f77f00'],
+    cbPalette: ['#f94144', '#f8961e', '#90be6d', '#43aa8b', '#577590', '#277da1'],
+    cellShape: 'planet',
+    effect: 'starfield',
+  },
+  {
+    id: 6,
+    name: 'Desert Mirage',
+    emoji: '🏜️',
+    bg: 'from-amber-300 via-orange-400 to-yellow-500',
+    accent: 'text-amber-950',
+    palette: ['#fcbf49', '#f77f00', '#d62828', '#003049', '#2a9d8f', '#eae2b7'],
+    cbPalette: ['#e9c46a', '#f4a261', '#e76f51', '#264653', '#2a9d8f', '#bc4749'],
+    cellShape: 'shimmer',
+    effect: 'shimmer',
+  },
+  {
+    id: 7,
+    name: 'Frozen Peaks',
+    emoji: '🏔️',
+    bg: 'from-sky-200 via-cyan-200 to-blue-300',
+    accent: 'text-sky-900',
+    palette: ['#00b4d8', '#0077b6', '#90e0ef', '#03045e', '#caf0f8', '#023e8a'],
+    cbPalette: ['#48cae4', '#0096c7', '#023e8a', '#00b4d8', '#03045e', '#90e0ef'],
+    cellShape: 'ice',
+    effect: 'frost',
+  },
+  {
+    id: 8,
+    name: 'Volcanic Core',
+    emoji: '🌋',
+    bg: 'from-stone-900 via-red-950 to-orange-950',
+    accent: 'text-orange-300',
+    palette: ['#ff0a54', '#ff5400', '#ffbd00', '#9e0059', '#390099', '#00b4d8'],
+    cbPalette: ['#f94144', '#f8961e', '#fcbf49', '#577590', '#7209b7', '#43aa8b'],
+    cellShape: 'lava',
+    effect: 'lava',
+  },
+  {
+    id: 9,
+    name: 'Cherry Blossom',
+    emoji: '🌸',
+    bg: 'from-pink-100 via-rose-200 to-pink-200',
+    accent: 'text-rose-700',
+    palette: ['#ff5da2', '#ff9e64', '#9ef01a', '#5ce1e6', '#c77dff', '#ff7b00'],
+    cbPalette: ['#f72585', '#f8961e', '#90be6d', '#4cc9f0', '#7209b7', '#f94144'],
+    cellShape: 'blossom',
+    effect: 'petals',
+  },
+  {
+    id: 10,
+    name: 'Golden Hour',
+    emoji: '🌅',
+    bg: 'from-orange-400 via-pink-500 to-purple-600',
+    accent: 'text-amber-100',
+    palette: ['#fcbf49', '#f77f00', '#d62828', '#003049', '#2a9d8f', '#eae2b7'],
+    cbPalette: ['#f94144', '#f8961e', '#fcbf49', '#277da1', '#43aa8b', '#577590'],
+    cellShape: 'gold',
+    effect: 'none',
+  },
+];
+
+export function worldById(id: number): WorldTheme {
+  return WORLDS[id - 1] ?? WORLDS[0];
+}
